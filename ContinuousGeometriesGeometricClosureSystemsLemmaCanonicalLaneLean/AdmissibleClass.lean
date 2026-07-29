@@ -1,0 +1,15 @@
+import canonicalLaneMathlib.AdmissibleClass
+import ContinuousGeometriesGeometricClosureSystemsLemmaCanonicalLaneLean.ClosureSystem
+import ContinuousGeometriesGeometricClosureSystemsLemmaCanonicalLaneLean.DirectJoint
+import ContinuousGeometriesGeometricClosureSystemsLemmaCanonicalLaneLean.GeometricClosureLemma
+
+namespace HautevilleHouse
+namespace ContinuousGeometriesGeometricClosureSystemsLemmaCanonicalLaneLean
+
+structure AdmissibleClass (L : Type u) [SemilatticeSup L] [OrderTop L] where
+  closureSystem : ClosureSystem L
+  lemmaEvidence : GeometricClosureLemmaEvidence L closureSystem
+  directJoint : DirectJoint L closureSystem
+
+end ContinuousGeometriesGeometricClosureSystemsLemmaCanonicalLaneLean
+end HautevilleHouse
